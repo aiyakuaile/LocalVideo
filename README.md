@@ -32,3 +32,4 @@ typedef NS_ENUM(NSInteger , TFVideoAssetType){
  */
 - (NSArray *)getVideoRelatedAttributesArray:(TFVideoAssetType)type;
 ```
+*如何播放本地视频请参考demo*
