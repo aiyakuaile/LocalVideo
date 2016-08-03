@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kRD-zS-BHU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--扫描本地视频-->
+        <scene sceneID="kMa-89-0dL">
+            <objects>
+                <tableViewController id="bUS-HT-ATL" customClass="TFScanVieoController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="201-b2-TXW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="bUS-HT-ATL" id="6Gl-vJ-F6G"/>
+                            <outlet property="delegate" destination="bUS-HT-ATL" id="hyz-CE-RJi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="扫描本地视频" id="jUz-Hr-7lf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="rMh-1x-yJ5">
+                            <connections>
+                                <action selector="refresh:" destination="bUS-HT-ATL" id="T3e-aL-Ddh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ie9-cW-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fnR-4c-pXl">
+            <objects>
+                <navigationController id="kRD-zS-BHU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mx5-VX-ryJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bUS-HT-ATL" kind="relationship" relationship="rootViewController" id="JIA-WP-hoV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U37-e8-Mpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-324" y="399"/>
+        </scene>
+    </scenes>
+</document>
